@@ -23,32 +23,16 @@
 <body>
 <div class="page-content">
 <div class="page-wrapper">
-<div data-w-id="6b2f2b79-e5ac-15c5-1b19-a2bc7f1f7956" data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar-component w-nav">
-<div class="new-container">
-<a href="index.html" class="logo-link-main w-nav-brand">
-<div><img src="images/utsw_white.png" loading="lazy" alt="UT Southwestern Medical Center" class="logotype" style="height: 60px; width: auto;"></div>
-</a>
-<nav role="navigation" class="navbar-menu w-nav-menu">
-<div class="menu-right">
-<div class="menu-left">
-<a href="index.html" class="navbar-link w-nav-link">Home</a>
-<a href="about.html" aria-current="page" class="navbar-link w-nav-link w--current">About Us</a>
-<a href="research.html" class="navbar-link w-nav-link">Research</a>
-<a href="publications.html" class="navbar-link w-nav-link">Publications</a>
-</div>
-</div>
-</nav>
-<div class="button-flex-left">
-<div class="menu-button-new w-nav-button">
-<div class="icon-component">
-<div class="line-top"></div>
-<div class="line-midddle"><div class="line-middle-inner"></div></div>
-<div class="line-bottom"></div>
-</div>
-</div>
-</div>
-</div>
-</div>
+<!-- Include Header -->
+<div id="header-container"></div>
+
+<script>
+fetch('header.html')
+.then(response => response.text())
+.then(data => {
+document.getElementById('header-container').innerHTML = data;
+});
+</script>
 
 <div class="hero">
 <div class="container">
@@ -293,79 +277,17 @@
 <div class="circle-absolute"></div>
 </section>
 
-<div class="footer">
-<div class="container">
-<div data-w-id="eea1e29a-216e-c103-259e-4c6a31792eb9" class="cta-wrapper">
-<h3 class="display-1 biger">Come build the future with us!</h3>
-<h3 class="display-1 biger">Share your <span class="other-font">vision</span> and join our team.</h3>
-<div class="margin-30px">
-<div class="button-flex add-to-center">
-<a href="research.html" data-w-id="690feb40-8e17-01e0-991e-762465bda045" class="button-with-animation w-inline-block">
-<div class="text-button">Our Research</div>
-<img loading="lazy" src="images/68149cfdae7cc5226d0569ac-6814a7937c6031105cd4ab11_arrow-right.avif" alt="" class="arrow-button">
-</a>
-<a href="publications.html" class="button-first-line w-inline-block">
-<div class="flex-learn"><div>View Publications</div></div>
-<div class="line-horizontal"></div>
-</a>
-</div>
-</div>
-<div class="circle-absolute first"></div>
-<div class="circle-absolute second"></div>
-<div class="gradient-line _100"></div>
-<div class="gradient-line left right"></div>
-<div class="gradient-line left"></div>
-</div>
-<div class="w-layout-grid footer-main-grid">
-<div class="footer-left-wrapper">
-<a href="#" class="footer-logo-link w-nav-brand">
-<img width="100" loading="lazy" alt="UT Southwestern Medical Center" src="images/utsw_white.png" style="height: 60px; width: auto;">
-</a>
-</div>
-<div class="w-layout-grid footer-grid">
-<div class="foorer-list">
-<div class="footer-title">Navigation</div>
-<a href="index.html" class="footer-link-main w-inline-block">
-<div>Home</div>
-</a>
-<a href="about.html" aria-current="page" class="footer-link-main w-inline-block w--current">
-<div>About Us</div>
-</a>
-<a href="research.html" class="footer-link-main w-inline-block">
-<div>Research</div>
-</a>
-<a href="publications.html" class="footer-link-main w-inline-block">
-<div>Publications</div>
-</a>
-</div>
-<div class="foorer-list">
-<div class="footer-title">Legal</div>
-<a href="https://www.utsouthwestern.edu/legal/privacy-policy.html" target="_blank" class="footer-link-main w-inline-block">
-<div>Privacy Policy</div>
-</a>
-<a href="https://www.utsouthwestern.edu/legal/" target="_blank" class="footer-link-main w-inline-block">
-<div>Site Policies</div>
-</a>
-</div>
-<div class="foorer-list">
-<div class="footer-title">Contact Us</div>
-<a href="#" class="footer-link-main w-inline-block">
-<div>5323 Harry Hines Blvd, Dallas, TX 75390</div>
-</a>
-<a href="#" class="footer-link-main w-inline-block">
-<div>214-648-3111</div>
-</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="margin-20px" style="text-align: center; padding-top: 40px;">
-<p class="copyright-second" style="margin-bottom: 20px;">Copyright © 2025. The University of Texas Southwestern Medical Center</p>
-<div style="width: 100%; height: 1px; background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.1) 20%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0.1) 80%, transparent 100%); margin-bottom: 30px;"></div>
-</div>
-</div>
+<!-- Include Footer -->
+<div id="footer-container"></div>
+
+<script>
+fetch('footer.html')
+.then(response => response.text())
+.then(data => {
+document.getElementById('footer-container').innerHTML = data;
+});
+</script>
+
 </div>
 </div>
 
