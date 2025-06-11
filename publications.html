@@ -6,8 +6,12 @@
 <meta content="Comprehensive list of publications from the Jamieson Lab, including AI for medical education, spatial biology, and foundation model research." name="description">
 <meta content="Publications - Jamieson Lab" property="og:title">
 <meta content="Comprehensive list of publications from the Jamieson Lab, including AI for medical education, spatial biology, and foundation model research." property="og:description">
+<meta content="images/publications-preview.png" property="og:image">
+<meta content="1200" property="og:image:width">
+<meta content="630" property="og:image:height">
 <meta content="Publications - Jamieson Lab" property="twitter:title">
 <meta content="Comprehensive list of publications from the Jamieson Lab, including AI for medical education, spatial biology, and foundation model research." property="twitter:description">
+<meta content="images/publications-preview.png" property="twitter:image">
 <meta property="og:type" content="website">
 <meta content="summary_large_image" name="twitter:card">
 <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -101,6 +105,12 @@ fetch('header.html')
 .then(response => response.text())
 .then(data => {
 document.getElementById('header-container').innerHTML = data;
+// Re-initialize Webflow after header is loaded
+if (window.Webflow) {
+window.Webflow.destroy();
+window.Webflow.ready();
+window.Webflow.require('ix2').init();
+}
 });
 </script>
 

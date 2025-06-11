@@ -6,8 +6,12 @@
 <meta content="Expert AI consultation for operationalizing artificial intelligence at your institution. Custom nanocourses and on-site training for medical professionals." name="description">
 <meta content="AI Consultation Services - Jamieson Lab" property="og:title">
 <meta content="Expert AI consultation for operationalizing artificial intelligence at your institution. Custom nanocourses and on-site training for medical professionals." property="og:description">
+<meta content="images/consultation-preview.png" property="og:image">
+<meta content="1200" property="og:image:width">
+<meta content="630" property="og:image:height">
 <meta content="AI Consultation Services - Jamieson Lab" property="twitter:title">
 <meta content="Expert AI consultation for operationalizing artificial intelligence at your institution. Custom nanocourses and on-site training for medical professionals." property="twitter:description">
+<meta content="images/consultation-preview.png" property="twitter:image">
 <meta property="og:type" content="website">
 <meta content="summary_large_image" name="twitter:card">
 <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -35,6 +39,12 @@ fetch('header.html')
 .then(response => response.text())
 .then(data => {
 document.getElementById('header-container').innerHTML = data;
+// Re-initialize Webflow after header is loaded
+if (window.Webflow) {
+window.Webflow.destroy();
+window.Webflow.ready();
+window.Webflow.require('ix2').init();
+}
 })
 .catch(error => {
 console.log('Header loading error:', error);

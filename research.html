@@ -6,8 +6,12 @@
 <meta content="Advancing medical education through AI-powered tools and multi-modal foundation models." name="description">
 <meta content="Research - Jamieson Lab" property="og:title">
 <meta content="Advancing medical education through AI-powered tools and multi-modal foundation models." property="og:description">
+<meta content="images/research-preview.png" property="og:image">
+<meta content="1200" property="og:image:width">
+<meta content="630" property="og:image:height">
 <meta content="Research - Jamieson Lab" property="twitter:title">
 <meta content="Advancing medical education through AI-powered tools and multi-modal foundation models." property="twitter:description">
+<meta content="images/research-preview.png" property="twitter:image">
 <meta property="og:type" content="website">
 <meta content="summary_large_image" name="twitter:card">
 <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -33,6 +37,12 @@ fetch('header.html')
 .then(response => response.text())
 .then(data => {
 document.getElementById('header-container').innerHTML = data;
+// Re-initialize Webflow after header is loaded
+if (window.Webflow) {
+window.Webflow.destroy();
+window.Webflow.ready();
+window.Webflow.require('ix2').init();
+}
 });
 </script>
 

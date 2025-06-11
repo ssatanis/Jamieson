@@ -6,8 +6,12 @@
 <meta content="Share your vision and come build with us! Send us an email with your updated CV if you have expertise in NLP, LLMs, AI/ML, data science, software development, or computational science." name="description">
 <meta content="Careers - Jamieson Lab" property="og:title">
 <meta content="Share your vision and come build with us! Send us an email with your updated CV if you have expertise in NLP, LLMs, AI/ML, data science, software development, or computational science." property="og:description">
+<meta content="images/careers-preview.png" property="og:image">
+<meta content="1200" property="og:image:width">
+<meta content="630" property="og:image:height">
 <meta content="Careers - Jamieson Lab" property="twitter:title">
 <meta content="Share your vision and come build with us! Send us an email with your updated CV if you have expertise in NLP, LLMs, AI/ML, data science, software development, or computational science." property="twitter:description">
+<meta content="images/careers-preview.png" property="twitter:image">
 <meta property="og:type" content="website">
 <meta content="summary_large_image" name="twitter:card">
 <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -32,6 +36,12 @@ fetch('header.html')
 .then(response => response.text())
 .then(data => {
 document.getElementById('header-container').innerHTML = data;
+// Re-initialize Webflow after header is loaded
+if (window.Webflow) {
+window.Webflow.destroy();
+window.Webflow.ready();
+window.Webflow.require('ix2').init();
+}
 });
 </script>
 
